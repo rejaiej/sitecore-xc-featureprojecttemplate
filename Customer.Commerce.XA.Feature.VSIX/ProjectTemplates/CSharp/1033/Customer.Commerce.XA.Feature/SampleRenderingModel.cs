@@ -13,7 +13,7 @@
 
         public virtual void Initialize(IRendering rendering)
         {
-            Assert.IsNotNull(rendering, $"$safeprojectname$.Models.$sampleRenderingModel$.Initialize: Parameter {nameof(rendering)} cannot be null.");
+            Assert.IsNotNull(rendering, $"$safeprojectname$.Models.$sampleRenderingModelName$.Initialize: Parameter {nameof(rendering)} cannot be null.");
 
             this.Items = new List<string>()
             {
