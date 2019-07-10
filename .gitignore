@@ -3,3 +3,6 @@
 ################################################################################
 
 /.vs/Customer.Commerce.XA
+/Customer.Commerce.XA.Feature.VSIX/bin/Debug
+/Customer.Commerce.XA.Feature.VSIX/obj
+/packages

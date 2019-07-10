@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:sdk="http://schemas.microsoft.com/developer/vstemplate-sdkextension/2010">
+  <TemplateData>
+    <Name>Sitecore Commerce 9.1 Feature Project</Name>
+    <Description>Project template used to be a feature project for Sitecore Commerce 9.1</Description>
+    <Icon>Customer.Commerce.XA.Feature.ico</Icon>
+    <ProjectType>CSharp</ProjectType>
+    <RequiredFrameworkVersion>2.0</RequiredFrameworkVersion>
+    <SortOrder>1000</SortOrder>
+    <TemplateID>7a2c747d-3b7c-49ac-9899-68e4778dfb9f</TemplateID>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>Customer.Commerce.XA.Feature</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+  </TemplateData>
+  <TemplateContent>
+    <Project File="Customer.Commerce.XA.Feature.csproj" ReplaceParameters="true" TargetFileName="$safeprojectname$.csproj">
+      <ProjectItem>Web.config</ProjectItem>
+      <ProjectItem>Web.Debug.config</ProjectItem>
+      <ProjectItem>Web.Release.config</ProjectItem>
+      <ProjectItem>packages.config</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="properties\AssemblyInfo.cs">assemblyinfo.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="App_Config\Include\Feature\Commerce\$sampleName$\$safeprojectname$.config">Customer.Commerce.XA.Feature.config</ProjectItem>
+      <ProjectItem ReplaceParameters="true" OpenInEditor="true" TargetFileName="Controllers\$sampleControllerName$.cs">SampleController.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Models\$sampleRenderingModelName$.cs">SampleRenderingModel.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Repositories\$sampleIRepositoryName$.cs">ISampleRepository.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Repositories\$sampleRepositoryName$.cs">SampleRepository.cs</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Views\web.config">Web.views.config</ProjectItem>
+      <ProjectItem ReplaceParameters="true" TargetFileName="Views\Commerce\$sampleName$\$getAllItemsName$.cshtml">GetAllItems.cshtml</ProjectItem>
+    </Project>
+    <CustomParameters>
+      <CustomParameter Name="$sampleName$" Value="Sample"/>
+      <CustomParameter Name="$sampleControllerName$" Value="SampleController"/>
+      <CustomParameter Name="$sampleRenderingModelName$" Value="SampleRenderingModel"/>
+      <CustomParameter Name="$sampleRepositoryName$" Value="SampleRepository"/>
+      <CustomParameter Name="$sampleIRepositoryName$" Value="ISampleRepository"/>
+      <CustomParameter Name="$getAllItemsName$" Value="GetAllItems"/>
+    </CustomParameters>
+  </TemplateContent>
+</VSTemplate>

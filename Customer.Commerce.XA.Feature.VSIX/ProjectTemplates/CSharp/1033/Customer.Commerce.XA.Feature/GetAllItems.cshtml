@@ -1,0 +1,22 @@
+﻿@using Sitecore.XA.Foundation.MarkupDecorator.Extensions
+@using Sitecore.XA.Foundation.SitecoreExtensions.Extensions
+
+@model $safeprojectname$.Models.$sampleRenderingModelName$
+
+<div @Html.Sxa().Component("cxa-$sampleName$-$getAllItemsName$-component", Model.Attributes)>
+    @if (!string.IsNullOrWhiteSpace(Model.ErrorMessage))
+    {
+        @Model.ErrorMessage
+    }
+    else
+    {
+        <div class="component-content">
+            @foreach (var item in Model.Items)
+            {
+                <div>
+                    @item
+                </div>
+            }
+        </div>
+    }
+</div>
